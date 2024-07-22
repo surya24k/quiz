@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>In web design, what does CSS stand for?</h1>
+        <div id="quiz">
+            <div class="option" value="false" data-value="A">
+                <span>A</span> Counter Strike Source
+            </div>
+            <div class="option" value="false" data-value="B">
+                <span>B</span> Corrective Style Sheet
+            </div>
+            <div class="option" value="false" data-value="C">
+                <span>C</span> Computer Style Sheet
+            </div>
+            <div class="option" value="true" data-value="D">
+                <span>D</span> Cascading Style Sheet
+            </div>
+        </div>
+        <div id="print" class="option"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let quiz = document.querySelectorAll('.option');
+            let printval = document.getElementById('print');
+
+            quiz.forEach((val) => {
+                val.addEventListener('click', () => {
+                    let isCorrect = val.getAttribute('value') === 'true';
+                    if (isCorrect) {
+                        val.classList.add('correct');
+                        printval.innerHTML = '<p>Correct Answer</p>';
+                    } else {
+                        val.classList.add('incorrect');
+                        printval.innerHTML = '<p>Wrong Answer</p>';
+                    }
+                    });
+                });
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f1f1;
+    margin-top: 80px;
+}
+.container {
+    border: 2px solid #ccc;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: auto;
+}
+.container h1 {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.option {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+.option span {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 10%;
+    margin-right: 10px;
+    color: white;
+    font-weight: bold;
+    /* background: linear-gradient(45deg, #252424, #ff8a5b); */
+}
+.option[data-value="A"] span {
+    background-color: #333;
+}
+.option[data-value="B"] span {
+    background-color: #333;
+}
+.option[data-value="C"] span {
+    background-color: #333;
+}
+.option[data-value="D"] span {
+    background-color: #333;
+}
+.correct {
+    background-color: green !important;
+    color: white !important;
+}
+.incorrect {
+    background-color: red !important;
+    color: white !important;
+}
+#print p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+}
